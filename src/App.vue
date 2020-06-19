@@ -45,11 +45,7 @@
       </section>
     </main>
     <transition name="fade">
-      <ProjectDetails
-        v-if="detailsVisible"
-        :details="projectDetails"
-        @close="detailsVisible=false"
-      />
+      <ProjectDetails v-if="detailsVisible" :details="projectDetails" @close="closeDetails" />
     </transition>
   </div>
 </template>
@@ -72,8 +68,30 @@ export default {
   },
   methods: {
     showItem: function(e) {
+      /*
+      history.pushState(
+        null,
+        null,
+        "#" + this.slugify(this.portfolio[e].title)
+      );
+      */
+
+      document.querySelector('html').classList.add('noscroll');
       this.projectDetails = this.portfolio[e];
       this.detailsVisible = true;
+    },
+    closeDetails: function() {
+      //window.history.back();
+      document.querySelector('html').classList.remove('noscroll');
+      this.detailsVisible = false;
+    },
+    slugify: function(str) {
+      str.replace(/\W/g, "");
+      let slug = str
+        .split(" ")
+        .join("-")
+        .toLowerCase();
+      return slug;
     }
   }
 };
@@ -179,7 +197,6 @@ p {
 
 .contact-icon-link {
   margin: 0 20px;
-  
 }
 
 .contact-icon:hover {
