@@ -144,6 +144,7 @@ export default {
   padding: 4px 12px;
   border-radius: 14px;
   margin: 0 10px;
+  white-space: nowrap;
 }
 
 .description-container {

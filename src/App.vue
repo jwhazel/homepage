@@ -28,10 +28,21 @@
           />
         </div>
       </section>
-      <!--
-      <section>
-        <h2 class="subhead">Some of my skills:</h2>
-      </section>-->
+
+      <section class="get-in-touch">
+        <h2 class="subhead">Get in touch:</h2>
+        <div class="contact-icon-container">
+          <a class="contact-icon-link" href="mailto:jwhazel@me.com">
+            <img class="contact-icon" src="./assets/mail.png" />
+          </a>
+          <a class="contact-icon-link" href="https://twitter.com/jessewhazel">
+            <img class="contact-icon" src="./assets/twitter.png" />
+          </a>
+          <a class="contact-icon-link" href="https://github.com/jwhazel">
+            <img class="contact-icon" src="./assets/github.png" />
+          </a>
+        </div>
+      </section>
     </main>
     <transition name="fade">
       <ProjectDetails
@@ -86,6 +97,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   font-size: 1.1em;
+  padding-bottom: 30px;
 }
 
 .inner-content {
@@ -153,5 +165,24 @@ p {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.get-in-touch {
+  margin-top: 60px;
+}
+
+.contact-icon {
+  width: 52px;
+  transition: transform 0.3s;
+  transform: scale(1);
+}
+
+.contact-icon-link {
+  margin: 0 20px;
+  
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
 }
 </style>
