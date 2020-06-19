@@ -7,6 +7,12 @@
         :key="index"
         :src="require(`../assets/img/${item}`)"
       />
+      <template slot="prevButton">
+        <i class="fas fa-chevron-left">‹</i>
+      </template>
+      <template slot="nextButton">
+        <i class="fas fa-chevron-right">›</i>
+      </template>
     </VueAgile>
   </div>
 </template>
@@ -42,7 +48,7 @@ export default {
   width: 80px;
 }
 .agile__nav-button:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
 .agile__nav-button--prev {
@@ -87,5 +93,10 @@ export default {
   object-fit: contain;
   width: 100%;
   max-height: 50vh;
+}
+
+.fas {
+  font-style: normal;
+  font-size: 3em;
 }
 </style>
