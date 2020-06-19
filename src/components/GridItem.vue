@@ -14,8 +14,10 @@ export default {
 
 <style scoped>
 .grid-item {
-  width: 200px;
-  height: 200px;
+  width: 15vw;
+  height: 15vw;
+  max-width:200px;
+  max-height:200px;
   cursor: pointer;
   transform: scale(1);
   transition: 0.3s transform;

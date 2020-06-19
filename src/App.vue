@@ -76,13 +76,13 @@ export default {
       );
       */
 
-      document.querySelector('html').classList.add('noscroll');
+      document.querySelector("html").classList.add("noscroll");
       this.projectDetails = this.portfolio[e];
       this.detailsVisible = true;
     },
     closeDetails: function() {
       //window.history.back();
-      document.querySelector('html').classList.remove('noscroll');
+      document.querySelector("html").classList.remove("noscroll");
       this.detailsVisible = false;
     },
     slugify: function(str) {
@@ -164,6 +164,8 @@ p {
   animation-delay: 2s;
   animation-duration: 0.5s;
   animation-fill-mode: both;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 @keyframes fade-in {
@@ -201,5 +203,23 @@ p {
 
 .contact-icon:hover {
   transform: scale(1.2);
+}
+
+@media only screen and (max-width: 700px) {
+  .grid-item {
+    width: 23vw !important;
+    height: 23vw !important;
+    margin: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  main {
+    max-width: 100vw !important;
+  }
+
+  .grid-item-text-overlay {
+    font-size: 0.8em;
+  }
 }
 </style>

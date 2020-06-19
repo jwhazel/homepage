@@ -158,4 +158,9 @@ li {
   display: inline-block;
   margin: 0 20px;
 }
+
+p{
+  padding:0 10px;
+  box-sizing:border-box;
+}
 </style>
